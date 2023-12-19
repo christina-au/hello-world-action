@@ -1,12 +1,4 @@
-FROM alpine
-
-RUN apk add --no-cache \
-        bash \
-        httpie \
-        jq && \
-        which bash && \
-        which http && \
-        which jq
+FROM ubuntu
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
